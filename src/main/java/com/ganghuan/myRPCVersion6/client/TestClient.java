@@ -5,6 +5,8 @@ import com.ganghuan.myRPCVersion6.common.User;
 import com.ganghuan.myRPCVersion6.service.BlogService;
 import com.ganghuan.myRPCVersion6.service.UserService;
 
+import java.util.LinkedHashMap;
+
 public class TestClient {
     public static void main(String[] args) {
         // 构建一个使用java Socket/ netty/....传输的客户端
@@ -27,6 +29,7 @@ public class TestClient {
         System.out.println("从服务端得到的blog为：" + blogById);
         // 测试json调用空参数方法
         System.out.println(userService.hello());
+        LinkedHashMap<Integer, Integer> hashMap = new LinkedHashMap<>();
 
     }
 }
